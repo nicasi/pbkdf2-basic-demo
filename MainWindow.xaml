@@ -1,0 +1,23 @@
+﻿<Window x:Class="pbkdf_basic_demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pbkdf_basic_demo"
+        mc:Ignorable="d"
+        Title="PBKDF demo" Height="480" Width="300">
+    <StackPanel Margin="20">
+        <TextBlock>Enter encryption password:</TextBlock>
+        <TextBox Margin="0,0,0,10" x:Name="tbx_pwd"></TextBox>
+        <Button Margin="0,0,0,10" x:Name="btn_UsePassword" Click="btn_UsePassword_Click">Set Password</Button>
+        <TextBlock>Derived key:</TextBlock>
+        <TextBox Margin="0,0,0,10" x:Name="tb_keyhash"></TextBox>
+        <TextBlock FontWeight="Bold">Add User</TextBlock>
+        <TextBlock>Name:</TextBlock>
+        <TextBox Margin="0,0,0,10" x:Name="tb_naam"></TextBox>
+        <TextBlock>eMail:</TextBlock>
+        <TextBox Margin="0,0,0,20" x:Name="tb_email"></TextBox>
+        <Button Margin="0,0,0,10" x:Name="btn_AddUser" Click="btn_AddUser_Click">Add User with encrypted eMail</Button>
+        <ListBox x:Name="lb_persons" Height="120" MouseDoubleClick="lb_persons_MouseDoubleClick"></ListBox>
+    </StackPanel>
+</Window>
